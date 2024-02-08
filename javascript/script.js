@@ -1,3 +1,5 @@
+//////////////////////// sign up ///////////////////////////
+
 document.addEventListener("DOMContentLoaded", function () {
     
     const APIKEY = "65c47aedc5ab47165bcd60ba";
@@ -178,7 +180,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-////////////////////////// forum //////////////////////////////////////////
+//////////////////////////// forum //////////////////////////////////
 
 var likeCount = document.getElementsByClassName("likeCount");
 
