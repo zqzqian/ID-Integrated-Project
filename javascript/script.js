@@ -146,48 +146,53 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
-  //redirects user to lottie page when they click the "sign up" button
-  document.getElementById("userinfo-submit").addEventListener("click", function(e) {
-    e.preventDefault(); 
+  //(BUTTON FAILED) redirects user to lottie page when they click the "sign up" button
+  //document.getElementById("userinfo-submit").addEventListener("click", function(e) {
+  //  e.preventDefault(); 
 
-    let infoUsername = document.getElementById("userinfo-username").value;
-    let infoEmail = document.getElementById("userinfo-email").value;
-    let infoPassword = document.getElementById("userinfo-password").value;
+  //  let infoUsername = document.getElementById("userinfo-username").value;
+  //  let infoEmail = document.getElementById("userinfo-email").value;
+  //  let infoPassword = document.getElementById("userinfo-password").value;
 
-    let jsondata = {
-      "username": infoUsername,
-      "email": infoEmail,
-      "password": infoPassword
-    };
+  //  let jsondata = {
+  //    "username": infoUsername,
+  //    "email": infoEmail,
+  //    "password": infoPassword
+  //  };
 
-    let settings = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "x-apikey": APIKEY,
-        "Cache-Control": "no-cache"
-      },
-      body: JSON.stringify(jsondata),
-      beforeSend: function() {
-        document.getElementById("userinfo-submit").disabled = true;
-        document.getElementById("add-userinfo-form").reset();
-      }
-    };
+  //  let settings = {
+  //    method: "POST",
+  //    headers: {
+  //      "Content-Type": "application/json",
+  //      "x-apikey": APIKEY,
+  //      "Cache-Control": "no-cache"
+  //    },
+  //    body: JSON.stringify(jsondata),
+  //    beforeSend: function() {
+  //      document.getElementById("userinfo-submit").disabled = true;
+  //      document.getElementById("add-userinfo-form").reset();
+  //    }
+  //  };
 
-    fetch("https://salvagedsavings-47eb.restdb.io/rest/userinfo", settings)
-      .then(response => response.json())
-      .then(data => {
-        console.log(data);
-        document.getElementById("userinfo-submit").disabled = false;
+  //  fetch("https://salvagedsavings-47eb.restdb.io/rest/userinfo", settings)
+  //    .then(response => response.json())
+  //    .then(data => {
+  //      console.log(data);
+  //      document.getElementById("userinfo-submit").disabled = false;
 
-        window.location.href = "/html/lottie.html";
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        document.getElementById("userinfo-submit").disabled = false;
-      });
-  });
+  //      window.location.href = "/html/lottie.html";
+  //    })
+  //    .catch(error => {
+  //      console.error('Error:', error);
+  //      document.getElementById("userinfo-submit").disabled = false;
+  //    });
+  //});
 
+});
+
+//redirects user to lottie page when they click the "sign up" button
+document.getElementById("userinfo-submit").addEventListener("click", function() {
+  window.location.href = "lottie.html";
 });
 
 //////////////////////////// forum //////////////////////////////////
