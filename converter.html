@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Currency Converter</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/berlin-sans-fb" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body class="converter">
+        <header class="nav">
+            <h1><a href="index.html">SalvagedSavings</a></h1>
+            <nav>
+                <span><a href="home.html">HOME</a></span>
+                <span><a href="converter.html">CONVERTER</a></span>
+                <span><a href="forum.html">FORUM</a></span>
+                <span><a href="contact.html">CONTACT</a></span>
+            </nav>
+        </header>
+
+        <div class="container">
+            <header>Currency Converter</header>
+            <form action="#">
+                <div class="amount">
+                    <p>Enter Amount</p>
+                    <input type="text" value="1">
+                </div>
+                <div class="drop-list">
+                    <div class="from">
+                        <p>From</p>
+                        <div class="select-box">
+                            <img src="https://flagsapi.com/SG/flat/64.png" alt="flag">
+                            <select></select>
+                        </div>
+                    </div>
+                    <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+                    <div class="to">
+                        <p>To</p>
+                        <div class="select-box">
+                            <img src="https://flagsapi.com/US/flat/64.png" alt="flag">
+                            <select></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="exchange-rate">Getting exchange rate...</div>
+                <button>Get Exchange Rate</button>
+            </form>
+        </div>
+
+        <script src="converterjs.js"></script>
+
+
+    </body>
+</html>
