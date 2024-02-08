@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(data);
         document.getElementById("userinfo-submit").disabled = false;
 
-        window.location.href = "lottie.html";
+        window.location.href = "/html/lottie.html";
       })
       .catch(error => {
         console.error('Error:', error);
