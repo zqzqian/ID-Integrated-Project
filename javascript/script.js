@@ -7,20 +7,24 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("update-userinfo-container").style.display = "none";
     document.getElementById("add-update-msg").style.display = "none";
   
+    //submit form listener
     document.getElementById("userinfo-submit").addEventListener("click", function (e) {
 
       e.preventDefault();
    
+      //retrieve form data
       let infoUsername = document.getElementById("userinfo-username").value;
       let infoEmail = document.getElementById("userinfo-email").value;
       let infoPassword = document.getElementById("userinfo-password").value;
 
+      //get form values when user clicks on the "sign up" button
       let jsondata = {
         "username": infoUsername,
         "email": infoEmail,
         "password": infoPassword
       };
   
+      //send information to database
       let settings = {
         method: "POST", 
         headers: {
@@ -36,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       };
   
+      //send AJAX request to database
       fetch("https://salvagedsavings-47eb.restdb.io/rest/userinfo", settings)
         .then(response => response.json())
         .then(data => {
@@ -50,9 +55,9 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
   
-  
     function getContacts(limit = 10, all = true) {
   
+      //retrieve info
       let settings = {
         method: "GET",
         headers: {
@@ -62,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
       };
   
+      //make AJAX calls
       fetch("https://salvagedsavings-47eb.restdb.io/rest/userinfo", settings)
       .then(response => response.json())
       .then(response => {
@@ -82,6 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
+  //update listener
   document.getElementById("userinfo-list").addEventListener("click", function (e) {
     if (e.target.classList.contains("update")) {
       e.preventDefault();
@@ -111,6 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(document.getElementById("update-userinfo-msg").value);
     console.log();
 
+    //call update userinfo function which makes AJAX call to restdb
     updateForm(contactId, infoUsername, infoEmail, infoPassword);
   });
 
@@ -127,6 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
       body: JSON.stringify(jsondata)
     };
 
+    //send AJAX request
     fetch(`https://salvagedsavings-47eb.restdb.io/rest/userinfo/${id}`, settings)
       .then(response => response.json())
       .then(data => {
@@ -137,6 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
+  //redirects user to lottie page when they click the "sign up" button
   document.getElementById("userinfo-submit").addEventListener("click", function(e) {
     e.preventDefault(); 
 
@@ -182,6 +192,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //////////////////////////// forum //////////////////////////////////
 
+//increase like count when user clicks on the heart and decreases like count when they click again
 var likeCount = document.getElementsByClassName("likeCount");
 
 function likeButton(like, likeCount) {
@@ -200,6 +211,7 @@ function likeButton(like, likeCount) {
   likeCount.innerText = currentLikeCount;
 }
 
+//open and close comment overlay
 function on(overlayId) {
   document.getElementById(overlayId).style.display = "block";
 }

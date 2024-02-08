@@ -1,10 +1,14 @@
 /////////////////////////// converter //////////////////////////////
-  
+//this code provides the functionality to select currencies, view their flags, 
+//swap currencies, and fetch and display exchange rates between them.
+
+//the code selects various elements from the DOM
 const dropList = document.querySelectorAll(".drop-list select"),
 fromCurrency = document.querySelector(".from select"),
 toCurrency = document.querySelector(".to select"),
 getButton = document.querySelector("form button");
 
+//the nested loop iterates over each dropdown list and populates them with options representing currency codes.
 for (let i = 0; i < dropList.length; i++) {
   for(currency_code in country_code){
     let selected;
@@ -21,6 +25,7 @@ for (let i = 0; i < dropList.length; i++) {
   });
 }
 
+//this function loads the flag image associated with the selected currency
 function loadFlag(element){
   for(code in country_code){
     if(code == element.value){
@@ -39,6 +44,8 @@ getButton.addEventListener("click", e =>{
   getExchangeRate();
 });
 
+//swaps the selected currencies when clicked.
+//updates the flag images and fetches the exchange rate.
 const exchangeIcon = document.querySelector(".drop-list .icon");
 exchangeIcon.addEventListener("click", ()=>{
   let tempCode = fromCurrency.value;
@@ -49,6 +56,8 @@ exchangeIcon.addEventListener("click", ()=>{
   getExchangeRate();
 });
 
+//this function retrieves the exchange rate between 2 currencies using an API.
+//it fetches the exchange rate based on selected currencies, calculates the total exchange amount and updates the text displaying the exchange rate.
 function getExchangeRate(){
   const amount = document.querySelector(".amount input"),
   exchangeRateTxt = document.querySelector(".exchange-rate");
