@@ -2,6 +2,10 @@
 
 SalvagedSavings is an all-in-one web application that aids you to reach Financial Independence and Retire Early (FIRE). No matter which stage of life you are in, it is never too early nor too late to start being money conscious. SalvagedSavings has features to help you plan your budget, a currency converter for you to check how the Singapore Dollar compares to other currencies, and has a welcoming community waiting for you to join them! What are you waiting for? Come check us out!
 
+## Contributions
+Zhi Qian's contributions: index.html, forum.html, contact.html, script.js, style.css
+Cyanne's contributions: home.html, converter.html, lottie.html, converter.js, lottie.js, style.css
+
 ## Design Process
 The website is catered to people of all ages to use. People who use this website wants to learn more about budgeting and to keep track of exchange rates. Our project is the best way to help them achieve these things as we have a forum page where people are able to voice out their questions and doubts. Users with experience and knowledge can then comment on their post to give them some advice or suggestions. Our website also has a real-time currency converter where users can compare currencies anywhere anytime.
 
