@@ -1,0 +1,394 @@
+/*header*/
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+    background-color: #4B9457;
+    margin: 0;
+    width: 100%;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    padding-top: 20px;
+    padding-bottom:20px;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+}
+
+header a:hover{
+    text-decoration: underline;
+}
+
+header img {
+    max-width: 300px;
+}
+
+/*h1{
+    font-size: 35px;
+    font-family: 'Berlin Sans FB', sans-serif;
+    margin: 0;
+}*/
+
+span{
+    font-size: 20px;
+    padding: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav span{
+    margin-right: 50px;
+}
+
+/*sign up*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form {
+    width: 382px;
+    overflow: hidden;
+    margin: auto;
+    padding: 80px;
+    background: #95C29C;
+    border-radius: 15px;
+}
+
+h1 {
+    text-align: center;
+    color: azure;
+    padding: 20px;
+}
+
+label {
+    color: blanchedalmond;
+    font-size: 17px;
+}
+
+.form-control {
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+
+span {
+    color: white;
+    font-size: 17px;
+}
+
+.mt-5 .table {
+    padding-top: 100px;
+}
+
+/*home*/
+
+.content{
+    z-index: -1;
+    padding: 50px;
+    margin-top: 50px;
+}
+
+.content h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.p-2 h3{
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.column{
+    float: left;
+    width: 49%;
+    padding: 5px;
+}
+
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.row{
+    padding-bottom: 30px;
+}
+
+/*converter*/
+
+body.converter{
+    background-color: #95C29C;
+}
+
+.container{
+    width: 300px;
+    overflow: hidden;
+    margin: auto;
+    padding: 80px;
+    background: white;
+    border-radius: 15px;
+    margin-top: 200px;
+    margin-bottom: 50px;
+}
+
+.container header{
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.container form{
+    margin: 40px 0 20px 0;
+}
+
+form :where(input, select, button){
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+form p{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+form input{
+    border: 1px solid grey;
+    height: 50px;
+    padding: 0 15px;
+    font-size: 17px;
+}
+
+form input:focus{
+    padding: 0 14px;
+    border: 2px solid #95C29C;
+}
+
+form .drop-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.drop-list .select-box{
+    display: flex;
+    height: 50px;
+    width: 115px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+.select-box select{
+    width: auto;
+    font-size: 16px;
+    margin: 0 -5px 0 5px;
+}
+
+.select-box select::-webkit-scrollbar{
+    width: 8px;
+}
+
+.select-box select::-webkit-scrollbar-track{
+    background: white;
+}
+
+.select-box select::-webkit-scrollbar-thumb{
+    background: gray;
+    border-radius: 8px;
+    border-right: 2px solid white;
+}
+
+.select-box img{
+    max-width: 35px;
+}
+
+.drop-list .icon{
+    cursor: pointer;
+    font-size: 22px;
+    margin-top: 40px;
+}
+
+form .exchange-rate{
+    font-size: 17px;
+    margin: 20px 0 30px;
+}
+
+form button{
+    height: 50px;
+    font-size: 17px;
+    color: white;
+    background: #95C29C;
+    cursor: pointer;
+}
+
+/*forum*/
+
+.container-forum {
+    padding: 50px;
+}
+
+.mb-3 {
+    margin-top: 50px;
+}
+
+.rounded-circle {
+    width: 50px;
+    height: auto;
+}
+
+.p-2 {
+    font-size: 30px;
+}
+
+.post-title {
+    font-size: 25px;
+}
+
+.post-content {
+    font-size: 20px;
+}
+
+.fa-regular, .fa-solid {
+    font-size: 30px;
+}
+
+.fa-regular:hover {
+    color: grey;
+}
+
+.overlay-comment {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.background-comment {
+    background: white;
+    height: 60%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    font-size: 20px;
+    color: black;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    max-width: 80%;
+    padding: 20px;
+}
+
+.overlay-text .rounded-circle {
+    width: 40px;
+    height: auto;
+}
+
+.overlay-text .p-2 {
+    font-size: 23px;
+}
+
+.overlay-text .comment-section {
+    font-size: 30px;
+}
+
+.overlay-text .mb-3 {
+    margin-top: 10px;
+}
+
+.overlay-text .comment-content {
+    font-size: 18px;
+}
+
+hr {
+    z-index: -1;
+}
+
+/*contact*/
+
+.container-contact {
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-box {
+    width: 80%;
+    overflow: hidden;
+    margin: auto;
+    padding: 80px;
+    background: #95C29C;
+    border-radius: 15px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-us {
+    text-align: center;
+ }
+
+.container-contact .p-2 {
+    font-size: 25px;
+}
+
+.contact-socials .flex-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-socials .p-2 {
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.contact-socials .fa-brands {
+    font-size: 60px;
+}
+
+.contact-socials a {
+    color: #1E3050;
+}
+
+/* lottie */
+
+.animation-center{
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
